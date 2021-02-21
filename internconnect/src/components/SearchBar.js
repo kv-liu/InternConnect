@@ -1,5 +1,7 @@
+import { declareExportDeclaration } from '@babel/types';
 import React, {Component, useState} from 'react';
 import {Link} from 'react-router-dom';
+import Results from './Results';
 
 
 const AWS_ENDPOINT = "https://783uqf6eeg.execute-api.us-west-1.amazonaws.com/prod/recruiter?company=";
@@ -24,11 +26,12 @@ function getAPI() {
     })
 }
 
+
 class SearchBar extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {input: ''};
+        this.state = {input: '', recruiters:[]};
     }
     
     handleChange = event  => {
@@ -40,15 +43,16 @@ class SearchBar extends Component {
         fetch(AWS_ENDPOINT_FINAL)
         .then(response => response.json())
         .then(data => {
-            console.log(data);
+            console.log(data); //obj
             console.log(AWS_ENDPOINT_FINAL);
+            this.setState({recruiters: data})
         })
-    
+
         .catch(err => {
             console.log(err);
         })
+        
     }
-
 
     render() {
         return (
@@ -59,6 +63,8 @@ class SearchBar extends Component {
             {/* </Link> */}
             <i className="fa fa-search"></i>
             <h1 className="test-input">Your input is: {this.state.input}</h1>
+            <Results recruiters={this.state.recruiters}></Results>
+
         </div>
         );
     }
