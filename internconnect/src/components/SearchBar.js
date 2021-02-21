@@ -2,13 +2,15 @@ import React, {Component, useState} from 'react';
 import {Link} from 'react-router-dom';
 
 
-const AWS_ENDPOINT = "https://783uqf6eeg.execute-api.us-west-1.amazonaws.com/prod/recruiter?company=Apple";
+const AWS_ENDPOINT = "https://783uqf6eeg.execute-api.us-west-1.amazonaws.com/prod/recruiter?company=";
+
 
 function getAPI() {
     fetch(AWS_ENDPOINT)
     .then(response => response.json())
     .then(data => {
         console.log(data);
+        console.log(AWS_ENDPOINT);
         // return fetch(AWS_ENDPOINT, fetchData).then(response => response.json()) <-- errors?
         // const fetchData = {
         //     method: 'GET',
@@ -22,9 +24,6 @@ function getAPI() {
     })
 }
 
-
-
-
 class SearchBar extends Component {
 
     constructor(props) {
@@ -36,23 +35,35 @@ class SearchBar extends Component {
         this.setState({input: event.target.value})
     }
 
+    handleAPI = event => {
+        const AWS_ENDPOINT_FINAL = AWS_ENDPOINT + this.state.input.charAt(0).toUpperCase() + this.state.input.slice(1).toLowerCase();
+        fetch(AWS_ENDPOINT_FINAL)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            console.log(AWS_ENDPOINT_FINAL);
+        })
+    
+        .catch(err => {
+            console.log(err);
+        })
+    }
+
+
     render() {
         return (
         <div className="search-div" action="">
-            <input type="search" className="search-bar" placeholder="Type to search..." required value={this.state.input} onChange={this.handleChange}></input>
-            <Link to='/results'>
-            <button type="submit" className="search-btn" onClick={getAPI}/>
-            </Link>
+            <input type="search" className="search-bar" placeholder="Type to search..." required value={this.state.input} onChange={this.handleChange}/>
+            {/* <Link to='/results'> */}
+            <button type="submit" id="Button" className="search-btn" onClick={this.handleAPI}/>
+            {/* </Link> */}
             <i className="fa fa-search"></i>
             <h1 className="test-input">Your input is: {this.state.input}</h1>
         </div>
-
-        
-                
-            
         );
     }
 }
+
 
 export default SearchBar;
 

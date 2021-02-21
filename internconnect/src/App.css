@@ -79,20 +79,22 @@
   color:transparent;
   background: transparent;
   border: non!important;
+  border-style: hidden;
   padding: 10px;
   width: 42.5px;
   height: 42.5px;
   position: absolute;
   top: 0;
   right: 0;
-  border-radius: 50%;
+  border-radius: 60%;
   color:transparent;
   transition: all 3s;
 }
 
+
 .search-div:hover {
-  cursor: pointer;
   width: 1000px;
+  cursor: pointer;
   
 }
 
