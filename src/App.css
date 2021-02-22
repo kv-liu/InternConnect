@@ -13,7 +13,7 @@
   display: block;
   color: black;
   top: 0px;
-  position: absolute;
+  position: relative;
   font-size: 100px;
 }
 
@@ -83,7 +83,7 @@
 
 .search-div:hover {
   cursor: pointer;
-  width: 1000px;
+  width: 100%;
   
   
 }
