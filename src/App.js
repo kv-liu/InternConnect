@@ -4,7 +4,6 @@ import ProjectHeader from './components/ProjectHeader';
 import Results from './components/Results';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
-
 function App() {
   return (
     <Router>
@@ -27,4 +26,5 @@ const Home = () =>(
     <SearchBar />
   </div>
 )
+
 export default App;
