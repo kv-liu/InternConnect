@@ -51,19 +51,23 @@ class SearchBar extends Component {
         .catch(err => {
             console.log(err);
         })
-        
     }
 
+    //this.state.input for live user input
     render() {
         return (
         <div className="search-div" action="">
-            <input type="search" className="search-bar" placeholder="Type to search..." required value={this.state.input} onChange={this.handleChange}/>
+            <div></div>
+            <input type="search" className="search-bar" placeholder="Type in a company name..." required value={this.state.input} onChange={this.handleChange}/>
             {/* <Link to='/results'> */}
             <button type="submit" id="Button" className="search-btn" onClick={this.handleAPI}/>
             {/* </Link> */}
             <i className="fa fa-search"></i>
-            <h1 className="test-input">Your input is: {this.state.input}</h1>
-            <Results recruiters={this.state.recruiters}></Results>
+            <div className="result-table">
+                <Results recruiters={this.state.recruiters}></Results>
+            </div>
+            
+            <svg className="ghost"></svg>
 
         </div>
         );

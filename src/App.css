@@ -8,17 +8,6 @@
   text-align: center;
 }
 
-/* 
-.search-bar {
-  width: 250px;
-  box-sizing: border-box;
-  border: 1.5px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-  background-repeat: no-repeat;
-  padding: 12px 20px 12px 40px;
-} */
-
 
 .project-header {
   display: block;
@@ -87,8 +76,8 @@
   top: 0;
   right: 0;
   border-radius: 60%;
-  color:transparent;
   transition: all 3s;
+  outline: none;
 }
 
 
@@ -111,4 +100,108 @@
 .test-input {
   padding: 100px;
 
+}
+
+.result-table {
+  padding: 100px;
+}
+
+
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -60px;
+  margin-top: -260px;
+}
+
+.ghost {
+  animation: float 3s ease-out infinite;
+}
+
+@keyframes float {
+  50% {
+     transform: translate(0, 20px);
+  }
+}
+.shadowFrame {
+  width: 130px;
+  margin-top: 15px;
+}
+.shadow {
+  animation: shrink 3s ease-out infinite;
+  transform-origin: center center;
+  ellipse {
+    transform-origin: center center;
+  }
+}
+
+@keyframes shrink {
+  0% {
+    width: 90%;
+    margin: 0 5%;
+  }
+  50% {
+    width: 60%;
+    margin: 0 18%;
+  }
+  100% {
+    width: 90%;
+    margin: 0 5%;
+  }
+}
+
+.speech-bubble {
+  width: 300px;
+  margin: 40px auto;
+  border: 4px solid #2D86C8;
+  padding: 10px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 22px;
+  color: white;
+  position: absolute;
+  margin-top: -625px;
+}
+
+
+.speech-bubble:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid #2D86C8;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #2D86C8;
+  border-bottom: 10px solid transparent;
+  left: 20px;
+  bottom: -23px;
+}
+
+.speech-bubble:after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid #6CB0F2;;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #6CB0F2;
+  border-bottom: 10px solid transparent;
+  left: 24px;
+  bottom: -13px;
+}
+
+
+.initial-text {
+  visibility: hidden;
+  position: relative;
+}
+
+.initial-text:after {
+  visibility: visible;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "This text replaces the original.";
 }

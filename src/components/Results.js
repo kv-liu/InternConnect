@@ -27,8 +27,8 @@ export default function BasicTable(props) {
       <Table className={classes.table} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell align="left">Name</TableCell>
-            <TableCell align="left">Linkedin URL</TableCell>
+            <TableCell align="left" ><b>Name</b></TableCell>
+            <TableCell align="left"><b>LinkedIn URL</b></TableCell>
           </TableRow>
         </TableHead>
         <TableBody>

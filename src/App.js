@@ -9,7 +9,10 @@ function App() {
   return (
     <Router>
     <div className="App">
-      <ProjectHeader />
+      <ProjectHeader /> 
+        <div className="speech-bubble" >
+          <p className="inital-text">Hover over the icon below me to search for recruiters!</p>
+        </div>
       <Switch>
         <Route path="/" exact component={Home}/>
         <Route path="/results" component={Results}/>
