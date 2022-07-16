@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-internconnect-dev-222611-authRole",
+      "UnauthRoleArn": "arn:aws:iam::811064390367:role/amplify-internconnect-dev-222611-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::811064390367:role/amplify-internconnect-dev-222611-authRole",
+      "Region": "us-west-1",
+      "DeploymentBucketName": "amplify-internconnect-dev-222611-deployment",
+      "UnauthRoleName": "amplify-internconnect-dev-222611-unauthRole",
+      "StackName": "amplify-internconnect-dev-222611",
+      "StackId": "arn:aws:cloudformation:us-west-1:811064390367:stack/amplify-internconnect-dev-222611/cfd6b070-04c7-11ed-9e63-06c9c632a153",
+      "AmplifyAppId": "d29wfgqiwwqhal"
+    },
+    "categories": {
+      "auth": {
+        "internconnectcdf26ecb": {}
+      }
+    }
+  }
+}

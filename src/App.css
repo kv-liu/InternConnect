@@ -1,97 +1,7 @@
-.App {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-align: center;
-}
-
-.project-header {
+body > #root {
   display: block;
-  color: black;
-  top: 0px;
-  position: relative;
-  font-size: 100px;
+  height: 100%;
 }
-
-.search-div {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  width: 50px;
-  height: 50px;
-  transform: translate(-50%,-50%);
-  transition: all 2.5s;
-  background: white;
-  box-sizing: border-box;
-  border: 4px solid white;
-  border-radius: 30px;
-  padding: 5px;
-}
-
-.search-bar {
-  position: absolute;
-  font-size: 16px;
-  top: 0;
-  left: 0;
-  width: 100%;;
-  height: 42.5px;
-  line-height: 45px;
-  outline: 0;
-  border: 0;
-  display: none;
-  border-radius: 20px;
-  padding: 0 20px;
-}
-
-.fa {
-  box-sizing: border-box;
-  padding: 10px;
-  width: 42.5px;
-  height: 42.5px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  border-radius: 50%;
-  color: #07051a;
-  text-align: center;
-  font-size: 1.2em;
-  transition: all 3s;
-}
-
-.search-btn  {
-  z-index: 2;
-  color:transparent;
-  background: transparent;
-  border: non!important;
-  border-style: hidden;
-  padding: 10px;
-  width: 42.5px;
-  height: 42.5px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  border-radius: 60%;
-  transition: all 3s;
-  outline: none;
-}
-
-.search-div:hover {
-  cursor: pointer;
-  width: 100%;  
-}
-
-.search-div:hover input {
-  display: block;
-}
-
-.search-div:hover .fa {
-  background: green;
-  color: white;
-}
-
 .test-input {
   padding: 100px;
 }
@@ -108,13 +18,15 @@
   margin-top: -260px;
 }
 
+/* ghost css */
+
 .ghost {
   animation: float 3s ease-out infinite;
 }
 
 @keyframes float {
   50% {
-     transform: translate(0, 20px);
+    transform: translate(0, 20px);
   }
 }
 .shadowFrame {
@@ -142,56 +54,4 @@
     width: 90%;
     margin: 0 5%;
   }
-}
-
-.speech-bubble {
-  width: 300px;
-  margin: 40px auto;
-  border: 4px solid #2D86C8;
-  padding: 10px;
-  text-align: center;
-  font-weight: 500;
-  font-size: 22px;
-  color: white;
-  position: absolute;
-  margin-top: -625px;
-}
-
-.speech-bubble:before {
-  content: "";
-  width: 0px;
-  height: 0px;
-  position: absolute;
-  border-left: 10px solid #2D86C8;
-  border-right: 10px solid transparent;
-  border-top: 10px solid #2D86C8;
-  border-bottom: 10px solid transparent;
-  left: 20px;
-  bottom: -23px;
-}
-
-.speech-bubble:after {
-  content: "";
-  width: 0px;
-  height: 0px;
-  position: absolute;
-  border-left: 10px solid #6CB0F2;;
-  border-right: 10px solid transparent;
-  border-top: 10px solid #6CB0F2;
-  border-bottom: 10px solid transparent;
-  left: 24px;
-  bottom: -13px;
-}
-
-.initial-text {
-  visibility: hidden;
-  position: relative;
-}
-
-.initial-text:after {
-  visibility: visible;
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: "This text replaces the original.";
 }
