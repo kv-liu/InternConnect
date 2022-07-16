@@ -1,11 +1,11 @@
-import React, { Component, useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import '../css/SearchButton.css'
 import { useNavigate } from 'react-router-dom'
 
-const SearchButton = (props) => {
+const SearchButton = props => {
   let navigateTo = useNavigate()
 
-  const handleInputChange = (e) => {
+  const handleInputChange = e => {
     e.preventDefault()
     setInput(e.target.value)
   }

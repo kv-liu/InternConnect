@@ -37,21 +37,21 @@ const ResultsPage = ({ signOut }) => {
     setPage(newPage)
   }
 
-  const handleChangeRowsPerPage = (event) => {
+  const handleChangeRowsPerPage = event => {
     setRowsPerPage(parseInt(event.target.value, 10))
     setPage(0)
   }
 
   function handleApi() {
     fetch(AWS_ENDPOINT_FINAL)
-      .then((response) => response.json())
-      .then((data) => {
+      .then(response => response.json())
+      .then(data => {
         setRecruiters({ data })
         console.log('JSON:', data)
         // console.log(AWS_ENDPOINT_FINAL)
         return
       })
-      .catch((err) => {
+      .catch(err => {
         console.log(err)
         return
       })
@@ -110,7 +110,11 @@ const ResultsPage = ({ signOut }) => {
                     </TableCell>
                     <TableCell align="center">
                       {
-                        <a href={list.linkedin_url} target="_blank">
+                        <a
+                          href={list.linkedin_url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <FaExternalLinkAlt />
                         </a>
                       }

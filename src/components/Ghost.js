@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-const Ghost = (props) => (
+const Ghost = props => (
   <div>
     <svg
       className="ghost"
@@ -58,8 +58,7 @@ const Ghost = (props) => (
 
 export default Ghost
 
-{
-  /* <div class="container">
+/* <div class="container">
 <svg class="ghost" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
   width="127.433px" height="132.743px" viewBox="0 0 127.433 132.743" enable-background="new 0 0 127.433 132.743"
   xml:space="preserve">
@@ -98,4 +97,3 @@ export default Ghost
 <ellipse cx="61.128" cy="19.872" rx="49.25" ry="8.916" style="fill-opacity: .3"/>
     </svg></p>
 </div> */
-}

@@ -1,3 +1,4 @@
+import React from 'react'
 import './App.css'
 import HomePage from './views/HomePage'
 import ResultsPage from './views/ResultsPage'
