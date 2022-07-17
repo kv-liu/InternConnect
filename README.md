@@ -1,5 +1,5 @@
 # Deployed Site Here:
-https://stormhacks2021.herokuapp.com/
+https://internconnect-now.herokuapp.com/
 
 # Getting Started with Create React App
 
