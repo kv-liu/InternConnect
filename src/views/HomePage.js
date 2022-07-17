@@ -3,6 +3,7 @@ import Typography from '@mui/material/Typography'
 import Box from '@mui/material/Box'
 import Ghost from '../components/Ghost'
 import SearchButton from '../components/SearchButton'
+import '../css/SearchButton.css'
 import NavButton from '../components/NavButton'
 
 const HomePage = () => {
