@@ -5,10 +5,10 @@ import Ghost from '../components/Ghost'
 import SearchButton from '../components/SearchButton'
 import NavButton from '../components/NavButton'
 
-const HomePage = ({ signOut }) => {
+const HomePage = () => {
   return (
     <>
-      <NavButton signOut={signOut} />
+      <NavButton />
 
       <Box
         className="center-box"

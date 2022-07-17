@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom'
 
 import MenuIcon from '@mui/icons-material/Menu'
 
-const NavButton = ({ signOut }) => {
+const NavButton = () => {
   let navigateTo = useNavigate()
   const [anchorEl, setAnchorEl] = React.useState(null)
   const open = Boolean(anchorEl)
@@ -47,7 +47,6 @@ const NavButton = ({ signOut }) => {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <MenuItem onClick={signOut}>SignOut</MenuItem>
         <MenuItem onClick={onNav}>Go Back</MenuItem>
       </Menu>
     </>

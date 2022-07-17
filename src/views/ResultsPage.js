@@ -20,7 +20,7 @@ import NavButton from '../components/NavButton'
 const AWS_ENDPOINT =
   'https://783uqf6eeg.execute-api.us-west-1.amazonaws.com/prod/recruiter?company='
 
-const ResultsPage = ({ signOut }) => {
+const ResultsPage = () => {
   const location = useLocation()
 
   const [recruiters, setRecruiters] = useState([])
@@ -73,7 +73,7 @@ const ResultsPage = ({ signOut }) => {
 
   return (
     <>
-      <NavButton signOut={signOut} />
+      <NavButton />
       <Container
         sx={{
           minWidth: '500px',
