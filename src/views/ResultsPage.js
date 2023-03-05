@@ -42,20 +42,20 @@ const ResultsPage = () => {
     setPage(0)
   }
 
-  function handleApi() {
-    fetch(AWS_ENDPOINT_FINAL)
-      .then(response => response.json())
-      .then(data => {
-        setRecruiters({ data })
-        console.log('JSON:', data)
-        // console.log(AWS_ENDPOINT_FINAL)
-        return
-      })
-      .catch(err => {
-        console.log(err)
-        return
-      })
-  }
+  // function handleApi() {
+  //   fetch(AWS_ENDPOINT_FINAL)
+  //     .then(response => response.json())
+  //     .then(data => {
+  //       setRecruiters({ data })
+  //       console.log('JSON:', data)
+  //       // console.log(AWS_ENDPOINT_FINAL)
+  //       return
+  //     })
+  //     .catch(err => {
+  //       console.log(err)
+  //       return
+  //     })
+  // }
 
   useEffect(async () => {
     const fetchRecruiters = async () => {
